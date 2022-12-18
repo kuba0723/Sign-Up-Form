@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="side">
+            <div id="logo"></div>
+            <div id="credit">Axis cult LLC</div>
+        </div>
+        <div class="form">
+            <form action="#" method="get" name="AxisSignUp" onsubmit="return validation(this)">
+                    <div>
+                        <h1>You know you need something like this in your life to help you
+                            realize your deepest dreams. Sign up now to get started</h1>
+                    </div>
+                    <div>
+                        <h2>You know you want this.</h2>
+                    </div>
+                        <div id="smallcontainer">
+                            <ul>
+                                <li>
+                                    <label for="1STName">FIRST NAME</label>
+                                    <input type="text" id="1STName" name="1STName">
+                                </li>
+                                <li>
+                                    <label for="Email">EMAIL</label>
+                                    <input type="email" name="Email" id="Email">
+                                </li>
+                                <li id="temp">
+                                    <label for="Password">PASSWORD</label>
+                                    <input type="password" name="Password" id="Password">
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <label for="LastName">LAST NAME</label>
+                                    <input type="text" name="LastName" id="LastName">
+                                </li>
+                                <li>
+                                    <label for="PhoneNumber">PHONE NUMBER</label>
+                                    <input type="tel" name="PhoneNumber" id="PhoneNumber" pattern="[0-9]" title="phone numbers should be numbers">
+                                </li>
+                                <li>
+                                    <label for="PasswordConfirm">CONFIRM PASSWORD</label>
+                                    <input type="password" name="PasswordConfirm" id="PasswordConfirm">
+                                </li>
+                            </ul>
+                        </div>
+                    <button type="submit">Create Account</button>
+                    <div id="pog">Already have an account? <a href="https://www.youtube.com/watch?v=fvRDBpEliEU&ab_channel=BetterIdeas">Log in</a>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validation(form){
+
+            let password = form.Password.value
+        console.log(password)
+        let ConfirmPassword = form.PasswordConfirm.value;
+        let div = document.createElement("div")
+        div.setAttribute("id","error")
+        div.textContent = "the passwords aren't the same, please input the correct password"
+        let passwordclass = document.querySelector("#Password")
+        let passwordclass2 = document.querySelector("#PasswordConfirm")
+        let temp = document.querySelector("#temp")
+        if(password != ConfirmPassword){
+            temp.appendChild(div)
+            passwordclass.classList.add("error")
+            passwordclass2.classList.add("error")
+            return false;
+        }
+        else{
+            passwordclass.classList.remove("error")
+            passwordclass2.classList.remove("error")
+        }}
+        function validateForm() {
+  let x = document.forms["AxisSignUp"]["LastName"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;   
+}
+.side{
+    background-image: url(./images/68747470733a2f2f692e696d6775722e636f6d2f69517a31756a632e6a7067.jpeg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+li{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    padding-right: 90px;
+    padding-left: 0;
+    gap: 20px;
+
+}
+form{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+#smallcontainer{
+    display: flex;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 1px 3px #0000001b;
+    margin-left: -30px;
+    padding-left: 30px;
+    padding-right: 300px;
+}
+.form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    padding-left: 30px;
+    width: 100%;
+}
+#credit{
+    color: #cccccc;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+#logo{
+    background-image: url(./images/axis-icon.png);
+    background-color: rgba(0, 0, 0, 0.774);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    opacity: 50%;
+}
+button{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#pog{
+    font-size: 20px;
+}
+h1{
+    max-width: 900px;
+
+}
+:focus{
+    border: solid rgb(130, 219, 255);
+}
+input{ 
+    outline: none;
+    border: solid #E5E7EB;
+    
+}
+#error{
+    color: red;
+    font-size: 10px;
+    width: 300px;
+}
+.error{
+    border: solid rgb(255, 0, 0);
+}
